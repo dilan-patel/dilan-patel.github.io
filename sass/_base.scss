@@ -1,0 +1,65 @@
+// - - - - - - - variables - - - - - - -
+
+// responsive
+$mobile-min-width: 360px;
+$tablet-min-width: 768px;
+$desktop-min-width: 1024px;
+$desktop-max-width: 1920px;
+
+// colours
+$colours: (
+    "black": #000000,
+    "white": #FFFFFF
+);
+
+// font-weight
+$font-weights: (
+    "thin": 300,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+
+// - - - - - - - functions - - - - - - -
+
+// get font weight
+@function font-weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+// get colour
+@function colour($colour) {
+    @return map-get($colours, $colour);
+}
+
+
+// - - - - - - - mixins - - - - - - -
+
+// Flex Center
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// mobile
+@mixin mobile() {
+    @media only screen and (min-width: $mobile-min-width) {
+        @content;
+    }
+}
+
+//tablet
+@mixin tablet() {
+    @media only screen and (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+
+// desktop
+@mixin desktop() {
+    @media only screen and (min-width: $desktop-min-width) and (max-width: $desktop-max-width) {
+        @content;
+    }
+}
