@@ -7,18 +7,10 @@ $desktop-min-width: 1024px;
 $desktop-max-width: 1920px;
 
 // colours
-$colours: (
-    "black": #000000,
-    "white": #FFFFFF
-);
+$primary-colour: #AFC8C8;
 
-// font-weight
-$font-weights: (
-    "thin": 300,
-    "regular": 400,
-    "medium": 500,
-    "bold": 700
-);
+// typography
+@import url(//db.onlinewebfonts.com/c/548e77e130ea884c764acabe1ba1ad63?family=0Arame);
 
 
 // - - - - - - - functions - - - - - - -
@@ -62,4 +54,16 @@ $font-weights: (
     @media only screen and (min-width: $desktop-min-width) and (max-width: $desktop-max-width) {
         @content;
     }
+}
+
+@mixin headers() {
+    font-family: "0Arame", sans-serif;
+    color: white;
+    font-weight: normal;
+}
+
+
+h1,h2 {
+    @include headers;
+    font-size: 7vw;
 }
