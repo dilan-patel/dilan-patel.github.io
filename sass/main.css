@@ -23,12 +23,12 @@ body {
   justify-content: center;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0 1.5vw;
 }
 
 #secondary-section {
   height: 100vh;
   width: 100vw;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
